@@ -1,7 +1,45 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import {
+  SiCplusplus, SiJava, SiPython, SiJavascript, SiMysql,
+  SiHtml5, SiCss3, SiReact, SiNextdotjs, SiNodedotjs,
+  SiExpress, SiMongodb, SiTailwindcss, SiBootstrap,
+  SiJsonwebtokens, SiInsomnia, SiPug,
+  SiGit, SiGithub, SiVercel, SiPostman, SiFigma,
+  SiMongoose
+} from "react-icons/si";
+
 
 export default function Home() {
+
+  const mySkills = [
+    /* Languages */
+    { skills: "C / C++", icon: <SiCplusplus /> },
+    { skills: "Java", icon: <SiJava /> },
+    { skills: "Python", icon: <SiPython /> },
+    { skills: "JavaScript", icon: <SiJavascript /> },
+    { skills: "SQL", icon: <SiMysql /> },
+
+    /* Technologies & Tools */
+    { skills: "HTML", icon: <SiHtml5 /> },
+    { skills: "CSS", icon: <SiCss3 /> },
+    { skills: "React.js", icon: <SiReact /> },
+    { skills: "Next.js", icon: <SiNextdotjs /> },
+    { skills: "Node.js", icon: <SiNodedotjs /> },
+    { skills: "Express.js", icon: <SiExpress /> },
+    { skills: "MongoDB", icon: <SiMongodb /> },
+    { skills: "Mongoose", icon: <SiMongoose /> },
+    { skills: "Tailwind CSS", icon: <SiTailwindcss /> },
+    { skills: "Bootstrap", icon: <SiBootstrap /> },
+    { skills: "NextAuth.js", icon: <SiJsonwebtokens /> },
+    { skills: "REST APIs", icon: <SiInsomnia /> },
+    { skills: "EJS", icon: <SiPug /> },
+    { skills: "Git / GitHub", icon: <SiGit /> },
+    { skills: "Vercel", icon: <SiVercel /> },
+    { skills: "Postman", icon: <SiPostman /> },
+    { skills: "Figma", icon: <SiFigma /> }
+  ];
+
   return (
     <>
       <Navbar />
@@ -99,38 +137,11 @@ export default function Home() {
 
           <div>
             <h2 className="text-3xl font-bold text-gray-900 text-center mt-28">Languages, Frameworks & Tools I Use</h2>
-            <div className="stack">
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+
+
+            <div>
+              <div className="card bg-red-500 w-36 h-12 grid grid-cols-6">
+                sdfsdf
               </div>
             </div>
           </div>
