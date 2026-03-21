@@ -1,43 +1,51 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+
 import {
-  SiCplusplus, SiJava, SiPython, SiJavascript, SiMysql,
-  SiHtml5, SiCss3, SiReact, SiNextdotjs, SiNodedotjs,
+  SiCplusplus, SiPython, SiJavascript, SiMysql,
+  SiHtml5, SiCss, SiReact, SiNextdotjs, SiNodedotjs,
   SiExpress, SiMongodb, SiTailwindcss, SiBootstrap,
-  SiJsonwebtokens, SiInsomnia, SiPug,
-  SiGit, SiGithub, SiVercel, SiPostman, SiFigma,
-  SiMongoose
+  SiJsonwebtokens, SiInsomnia, SiPug, SiDiagramsdotnet,
+  SiGit, SiGithub, SiVercel, SiPostman, SiFigma, SiLeetcode,
 } from "react-icons/si";
 
+import { DiJava } from "react-icons/di";
+import { DiGithubBadge } from "react-icons/di";
+import { DiLinux } from "react-icons/di";
+import { DiNpm } from "react-icons/di";
+import { DiVisualstudio } from "react-icons/di";
+import { FaHackerrank } from "react-icons/fa";
 
 export default function Home() {
 
   const mySkills = [
     /* Languages */
+    { skills: "DSA", icon: <SiDiagramsdotnet /> },
+    { skills: "Leetcode", icon: <SiLeetcode /> },
+    { skills: "Java", icon: <DiJava /> },
     { skills: "C / C++", icon: <SiCplusplus /> },
-    { skills: "Java", icon: <SiJava /> },
     { skills: "Python", icon: <SiPython /> },
     { skills: "JavaScript", icon: <SiJavascript /> },
+    { skills: "Next.js", icon: <SiNextdotjs /> },
+    { skills: "React.js", icon: <SiReact /> },
+    { skills: "Node.js", icon: <SiNodedotjs /> },
+    { skills: "MongoDB", icon: <SiMongodb /> },
     { skills: "SQL", icon: <SiMysql /> },
+    { skills: "Express.js", icon: <SiExpress /> },
+    { skills: "Tailwind CSS", icon: <SiTailwindcss /> },
+    { skills: "HTML", icon: <SiHtml5 /> },
+    { skills: "CSS", icon: <SiCss /> },
+    { skills: "Bootstrap", icon: <SiBootstrap /> },
+    { skills: "Linux", icon: <DiLinux /> },
+    { skills: "Git / GitHub", icon: < DiGithubBadge /> },
+    { skills: "Git / GitHub", icon: <SiGit /> },
 
     /* Technologies & Tools */
-    { skills: "HTML", icon: <SiHtml5 /> },
-    { skills: "CSS", icon: <SiCss3 /> },
-    { skills: "React.js", icon: <SiReact /> },
-    { skills: "Next.js", icon: <SiNextdotjs /> },
-    { skills: "Node.js", icon: <SiNodedotjs /> },
-    { skills: "Express.js", icon: <SiExpress /> },
-    { skills: "MongoDB", icon: <SiMongodb /> },
-    { skills: "Mongoose", icon: <SiMongoose /> },
-    { skills: "Tailwind CSS", icon: <SiTailwindcss /> },
-    { skills: "Bootstrap", icon: <SiBootstrap /> },
-    { skills: "NextAuth.js", icon: <SiJsonwebtokens /> },
-    { skills: "REST APIs", icon: <SiInsomnia /> },
-    { skills: "EJS", icon: <SiPug /> },
-    { skills: "Git / GitHub", icon: <SiGit /> },
     { skills: "Vercel", icon: <SiVercel /> },
     { skills: "Postman", icon: <SiPostman /> },
-    { skills: "Figma", icon: <SiFigma /> }
+    { skills: "Visualstudio", icon: <DiVisualstudio /> },
+    { skills: "Figma", icon: <SiFigma /> },
+    { skills: "Npm", icon: <DiNpm /> }
   ];
 
   return (
@@ -138,13 +146,27 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 text-center mt-28">Languages, Frameworks & Tools I Use</h2>
 
-
-            <div>
-              <div className="card bg-red-500 w-36 h-12 grid grid-cols-6">
-                sdfsdf
-              </div>
+            <div className="grid grid-cols-6 gap-5 mt-10">
+              {mySkills.map((mySkill, index) => {
+                return (
+                  <div key={index} className="card w-full h-18 grid grid-cols-1 place-items-center shadow-sm p-4 rounded-lg cursor-pointer hover:shadow-md">
+                    <div className="flex justify-center items-center text-center ">
+                      <span className="text-3xl font-bold uppercase tracking-wider">
+                        {mySkill.icon}
+                      </span>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
+            <p className="text-gray-500 text-center mt-6">+ many more skills</p>
           </div>
+        </div>
+      </section>
+
+      <section className="projects min-h-screen">
+        <div className="w-[80vw] mx-auto">
+          <h2 className="text-xl mb-2 font-semibold">Projects</h2>
         </div>
       </section>
     </>
