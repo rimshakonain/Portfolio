@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 import {
   SiCplusplus, SiPython, SiJavascript, SiMysql,
@@ -84,7 +85,7 @@ export default function Home() {
 
 
       <section className="about min-h-screen">
-        <div className="w-[60vw] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="title text-center font-bold text-4xl">About Me</div>
           <div className="text-center">
             <h2 className="font-bold text-3xl pt-8">Turning Ideas into Real-World Applications</h2>
@@ -95,7 +96,7 @@ export default function Home() {
         </div>
 
         <div className="about flex gap-8 pt-12">
-          <div className="bg-white w-[491px] h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white flex-1 h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
             <img className="object-cover" src="/srm.png" alt="SRM Easwari" />
             <div className="w-[475px] pt-4 pl-6">
               <h2 className="text-xl mb-2 font-semibold">My Academic Journey</h2>
@@ -103,7 +104,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-white w-[491px] h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white flex-1 h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
             <img className="object-cover h-[279px] w-full" src="/me.webp" alt="SRM Easwari" />
             <div className="w-[475px] pt-4 pl-6">
               <h2 className="text-xl mb-2 font-semibold">About Me</h2>
@@ -111,7 +112,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-white w-[491px] h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white flex-1 h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
             <img className="object-cover  h-[279px] w-full" src="/pc.webp" alt="SRM Easwari" />
             <div className="w-[475px] pt-4 pl-6">
               <h2 className="text-xl mb-2 font-semibold">Projects & Practice</h2>
@@ -164,11 +165,79 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="projects min-h-screen">
-        <div className="w-[80vw] mx-auto">
-          <h2 className="text-xl mb-2 font-semibold">Projects</h2>
+      <section className="projects min-h-screen pb-16">
+        <div className="w-[83vw] mx-auto">
+          <h2 className="text-lg text-zinc-600 text-start mb-2 font-semibold mt-32">Projects</h2>
+          <h2 className="font-semibold text-4xl mt-4">Take a Look at Some of My Recent Work</h2>
+          <div className="grid grid-cols-3 mt-20 gap-x-10 gap-y-8 mx-auto w-full">
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <img className="object-cover rounded-t-lg" src="GetMeAChai.png" alt="" />
+              <span className="text-md font-medium text-center pt-2">Creator Crowdfunding Platform</span>
+              <p className="px-4 text-zinc-600 text-center pt-2">A Patreon-style app with Razorpay integration and real-time contribution tracking.</p>
+            </div>
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <img className="object-cover rounded-t-lg" src="BitTree.png" alt="" />
+              <span className="text-md font-medium text-center pt-2">Everything you are. In one, simple link in bio.</span>
+              <p className="px-4 text-zinc-600 text-center pt-2">Consolidate your social presence and products into a single, customisable landing page.</p>
+            </div>
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <img className="object-cover rounded-t-lg" src="BitLinks.png" alt="" />
+              <span className="text-md font-medium text-center pt-2">The best URL shortener in the Market</span>
+              <p className="px-4 text-zinc-600 text-center pt-2">Fast, straightforward link shortening with zero tracking and no login required.
+              </p>
+            </div>
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <img className="object-cover rounded-t-lg" src="PassOP.png" alt="" />
+              <span className="text-md font-medium text-center pt-2">Your own Password Manager.</span>
+              <p className="px-4 text-zinc-600 text-center pt-2">A secure, no-login tool to store, edit, and manage your credentials privately.</p>
+            </div>
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <img className="object-cover rounded-t-lg" src="iTask.png" alt="" />
+              <span className="text-md font-medium text-center pt-2">Task Management App</span>
+              <p className="px-4 text-zinc-600 text-center pt-2">A clean, focused space to organise daily goals and track progress without clutter.</p>
+            </div>
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <img className="object-cover rounded-t-lg" src="Spotify.png" alt="" />
+              <span className="text-md font-medium text-center pt-2">Media Analytics Player</span>
+              <p className="px-4 text-zinc-600 text-center pt-2">Real-time audio engine featuring local file management and interactive playback controls.</p>
+            </div>
+          </div>
         </div>
       </section>
+
+      <section className="achievements min-h-96">
+        <div className="w-[83vw] mx-auto pb-11">
+          <h2 className="text-4xl font-semibold title-font text-gray-900 mb-12 pt-12 text-center">Achievements</h2>
+          <div className="flex w-full gap-7">
+            <div className="flex-1 box1 borde h-72 p-7 bg-gray-100 rounded">
+              <div className="text-4xl">🥇</div>
+              <h2 className="pt-3 font-semibold text-xl text-gray-900">Triple Academic Distinction</h2>
+              <p className="leading-relaxed pt-4 text-zinc-600">Secured 1st Rank for three consecutive years (10th, 11th, & 12th Grade), maintaining top-tier academic discipline and focus while consistently outperforming peers in highly competitive environments to build a solid foundation.</p>
+            </div>
+            <div className="flex-1 box1 borde h-72 p-7 bg-gray-100 rounded">
+              <div className="text-4xl">🚀</div>
+              <h2 className="pt-3 font-semibold text-xl text-gray-900">Development & Logic Consistency</h2>
+              <p className="leading-relaxed pt-4 text-zinc-600">Maintained a 700+ day coding streak with over 500 GitHub commits, successfully launching 7+ full-stack MERN and Next.js applications while mastering complex data structures and algorithmic problem-solving for scalable web development.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="hireme min-h-64">
+        <div className="parent relative">
+          <img className="w-full h-[370px] object-cover opacity-30" src="https://www.codewithharry.com/_next/image?url=%2Fcoding%2F1.jpg&w=3840&q=75" alt="Engineering Background" />
+          <div className="absolute inset-0 z-10">
+            <h2 className="font-extrabold text-6xl mb-4 text-center relative mt-20 mb-5">Launch Your Next Project</h2>
+            <p className="text-center text-xl text-base text-zinc-700 max-w-3xl mx-auto">Build fast, scalable web applications with India&apos;s most dedicated full-stack developer.</p>
+            <div className="flex justify-center mt-11">
+              <a href=""></a>
+              <button className="bg-black text-white cursor-pointer px-8 py-2 text-center text-lg font-semibold rounded-md border border-transparent transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50">Hire Me Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <Footer/>
     </>
   );
 }

@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <header className='flex flex-col px-6 py-5 h-28 bg-black text-white'>
             <div className='flex w-full'>
-                <div className={`logo font-bold text-2xl ${poppins.className}`}>&lt;/&gt;RimshaComix</div>
+                <div className={`logo font-bold text-xl ${poppins.className}`}>&lt;/&gt;RimshaComix</div>
                 <div className='flex justify-between w-full gap-4 pt-1'>
                     <div>
                         <ul className='flex gap-10 pl-6 cursor-pointer'>
