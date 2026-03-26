@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 import {
   SiCplusplus, SiPython, SiJavascript, SiMysql,
@@ -47,21 +49,33 @@ export default function Home() {
     { skills: "Visualstudio", icon: <DiVisualstudio /> },
     { skills: "Figma", icon: <SiFigma /> },
     { skills: "Npm", icon: <DiNpm /> }
+
   ];
+
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
     <>
       <Navbar />
       <div className="hero w-[60vw] mx-auto text-center mt-40 min-h-screen">
-        <button className="text-sm border border-2 p-2 rounded-full bg-[#18181b] px-5 text-white">Design. Code. Create</button>
+        <button className="text-sm border-2 p-2 rounded-full bg-[#18181b] px-5 text-white">Design. Code. Create</button>
         <h1 className="text-7xl pt-16">Welcome to RimshaComix</h1>
         <h2 className="text-3xl pt-4">Full-Stack MERN & Next.js Developer</h2>
         <p className="text-xl pt-12 text-gray-700">Want to see what I&apos;ve been working on? I&apos;ve got you covered!
           Browse my projects and skills to discover what I do best.
           This portfolio is my effort to showcase the coding and web development skills that took years to master.</p>
         <div className="flex gap-5 justify-center items-center pt-14">
-          <button className="border border-2 px-7 py-2 rounded-md cursor-pointer">View Projects</button>
-          <button className="border border-2 px-7 py-2 rounded-md text-white bg-black cursor-pointer">Download Resume</button>
+          <Link href='#Projects' onClick={(e) => handleScroll(e, 'Projects')}><button className="border-2 px-7 py-2 rounded-md cursor-pointer">View Projects</button></Link>
+          <button className="border-2 px-7 py-2 rounded-md text-white bg-black cursor-pointer">Download Resume</button>
         </div>
 
         <div className="flex gap-7 justify-center items-center mt-24 bg-[#151820] text-white p-6 font-bold w-fit mx-auto rounded-2xl">
@@ -81,10 +95,10 @@ export default function Home() {
       </div>
 
 
-      <div className="bg-black w-full h-[1px] my-20 opacity-50"></div>
+      <div className="bg-black w-full h-px my-20 opacity-50"></div>
 
 
-      <section className="about min-h-screen">
+      <section id="About" className="about min-h-screen">
         <div className="max-w-6xl mx-auto">
           <div className="title text-center font-bold text-4xl">About Me</div>
           <div className="text-center">
@@ -96,24 +110,24 @@ export default function Home() {
         </div>
 
         <div className="about flex gap-8 pt-12">
-          <div className="bg-white flex-1 h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-            <img className="object-cover" src="/srm.png" alt="SRM Easwari" />
+          <div className="bg-white flex-1 h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <Image width={1000} height={1000} className="object-cover h-69.75 w-full" src="/srm.png" alt="SRM Easwari" />
             <div className="w-[475px] pt-4 pl-6">
               <h2 className="text-xl mb-2 font-semibold">My Academic Journey</h2>
               <p className="text-zinc-600">B.E CSE at SRM Easwari, building a strong foundation in coding and tech skills.</p>
             </div>
           </div>
 
-          <div className="bg-white flex-1 h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-            <img className="object-cover h-[279px] w-full" src="/me.webp" alt="SRM Easwari" />
+          <div className="bg-white flex-1 h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <Image width={1000} height={1000} className="object-cover h-69.75 w-full" src="/me.webp" alt="Developer" />
             <div className="w-[475px] pt-4 pl-6">
               <h2 className="text-xl mb-2 font-semibold">About Me</h2>
               <p className="text-zinc-600">Full-Stack MERN & Next.js developer passionate about building real-world projects.</p>
             </div>
           </div>
 
-          <div className="bg-white flex-1 h-[400px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-            <img className="object-cover  h-[279px] w-full" src="/pc.webp" alt="SRM Easwari" />
+          <div className="bg-white flex-1 h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <Image width={1000} height={1000} className="object-cover  h-69.75 w-full" src="/pc.webp" alt="Projects" />
             <div className="w-[475px] pt-4 pl-6">
               <h2 className="text-xl mb-2 font-semibold">Projects & Practice</h2>
               <p className="text-zinc-600">Developing scalable applications and refining coding skills through hands-on projects.</p>
@@ -122,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="skills w-3/4 mx-auto">
+      <section id="Skills" className="skills w-3/4 mx-auto">
         <div className="w-[75vw] mx-auto">
           <div className="title text-center font-bold text-4xl pt-20">Technical Expertise</div>
           <div className="flex justify-between items-center mt-20">
@@ -165,39 +179,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="projects min-h-screen pb-16">
+      <section id="Projects" className="projects min-h-screen pb-16">
         <div className="w-[83vw] mx-auto">
           <h2 className="text-lg text-zinc-600 text-start mb-2 font-semibold mt-32">Projects</h2>
           <h2 className="font-semibold text-4xl mt-4">Take a Look at Some of My Recent Work</h2>
           <div className="grid grid-cols-3 mt-20 gap-x-10 gap-y-8 mx-auto w-full">
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <img className="object-cover rounded-t-lg" src="GetMeAChai.png" alt="" />
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image width={400} height={400} className="object-cover rounded-t-lg" src="/GetMeAChai.png" alt="" />
               <span className="text-md font-medium text-center pt-2">Creator Crowdfunding Platform</span>
               <p className="px-4 text-zinc-600 text-center pt-2">A Patreon-style app with Razorpay integration and real-time contribution tracking.</p>
             </div>
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <img className="object-cover rounded-t-lg" src="BitTree.png" alt="" />
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image width={400} height={400} className="object-cover rounded-t-lg" src="/BitTree.png" alt="" />
               <span className="text-md font-medium text-center pt-2">Everything you are. In one, simple link in bio.</span>
               <p className="px-4 text-zinc-600 text-center pt-2">Consolidate your social presence and products into a single, customisable landing page.</p>
             </div>
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <img className="object-cover rounded-t-lg" src="BitLinks.png" alt="" />
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image width={400} height={400} className="object-cover rounded-t-lg" src="/BitLinks.png" alt="" />
               <span className="text-md font-medium text-center pt-2">The best URL shortener in the Market</span>
               <p className="px-4 text-zinc-600 text-center pt-2">Fast, straightforward link shortening with zero tracking and no login required.
               </p>
             </div>
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <img className="object-cover rounded-t-lg" src="PassOP.png" alt="" />
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image width={400} height={400} className="object-cover rounded-t-lg" src="/PassOP.png" alt="" />
               <span className="text-md font-medium text-center pt-2">Your own Password Manager.</span>
               <p className="px-4 text-zinc-600 text-center pt-2">A secure, no-login tool to store, edit, and manage your credentials privately.</p>
             </div>
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <img className="object-cover rounded-t-lg" src="iTask.png" alt="" />
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image width={400} height={400} className="object-cover rounded-t-lg" src="/iTask.png" alt="" />
               <span className="text-md font-medium text-center pt-2">Task Management App</span>
               <p className="px-4 text-zinc-600 text-center pt-2">A clean, focused space to organise daily goals and track progress without clutter.</p>
             </div>
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-[300px] flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <img className="object-cover rounded-t-lg" src="Spotify.png" alt="" />
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image width={400} height={400} className="object-cover rounded-t-lg" src="/Spotify.png" alt="" />
               <span className="text-md font-medium text-center pt-2">Media Analytics Player</span>
               <p className="px-4 text-zinc-600 text-center pt-2">Real-time audio engine featuring local file management and interactive playback controls.</p>
             </div>
@@ -205,7 +219,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="achievements min-h-96">
+      <section id="Achievements" className="achievements min-h-96">
         <div className="w-[83vw] mx-auto pb-11">
           <h2 className="text-4xl font-semibold title-font text-gray-900 mb-12 pt-12 text-center">Achievements</h2>
           <div className="flex w-full gap-7">
@@ -223,12 +237,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="hireme min-h-64">
+      <section id="HireMe" className="hireme min-h-64">
         <div className="parent relative">
           <img className="w-full h-[370px] object-cover opacity-30" src="https://www.codewithharry.com/_next/image?url=%2Fcoding%2F1.jpg&w=3840&q=75" alt="Engineering Background" />
           <div className="absolute inset-0 z-10">
-            <h2 className="font-extrabold text-6xl mb-4 text-center relative mt-20 mb-5">Launch Your Next Project</h2>
-            <p className="text-center text-xl text-base text-zinc-700 max-w-3xl mx-auto">Build fast, scalable web applications with India&apos;s most dedicated full-stack developer.</p>
+            <h2 className="font-extrabold text-6xl text-center relative mt-20 mb-5">Launch Your Next Project</h2>
+            <p className="text-center text-xl text-zinc-700 max-w-3xl mx-auto">Build fast, scalable web applications with India&apos;s most dedicated full-stack developer.</p>
             <div className="flex justify-center mt-11">
               <a href=""></a>
               <button className="bg-black text-white cursor-pointer px-8 py-2 text-center text-lg font-semibold rounded-md border border-transparent transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50">Hire Me Now</button>
@@ -236,8 +250,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      <Footer/>
+
+      <Footer />
     </>
   );
 }

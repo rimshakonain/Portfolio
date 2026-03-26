@@ -1,3 +1,4 @@
+"use client";
 import { Poppins } from 'next/font/google';
 import Link from 'next/link'
 import React from 'react'
@@ -9,6 +10,17 @@ const poppins = Poppins({
 });
 
 const Navbar = () => {
+    const handleScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
     return (
         <header className='flex flex-col px-6 py-5 h-28 bg-black text-white'>
             <div className='flex w-full'>
@@ -16,12 +28,12 @@ const Navbar = () => {
                 <div className='flex justify-between w-full gap-4 pt-1'>
                     <div>
                         <ul className='flex gap-10 pl-6 cursor-pointer'>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Skills</li>
-                            <li>Projects</li>
-                            <li>Achievements</li>
-                            <li>Hire Me</li>
+                            <li><Link href='#Home' onClick={(e) => handleScroll(e, 'Home')}>Home</Link></li>
+                            <li><Link href='#About' onClick={(e) => handleScroll(e, 'About')}>About</Link></li>
+                            <li><Link href='#Skills' onClick={(e) => handleScroll(e, 'Skills')}>Skills</Link></li>
+                            <li><Link href='#Projects' onClick={(e) => handleScroll(e, 'Projects')}>Projects</Link></li>
+                            <li><Link href='#Achievements' onClick={(e) => handleScroll(e, 'Achievements')}>Achievements</Link></li>
+                            <li><Link href='#HireMe' onClick={(e) => handleScroll(e, 'HireMe')}>Hire Me</Link></li>
                         </ul>
                     </div>
                     <div className='flex items-start gap-4'>
