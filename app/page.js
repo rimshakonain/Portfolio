@@ -3,6 +3,8 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { useState } from "react";
+import Form from "@/components/Form";
 
 import {
   SiCplusplus, SiPython, SiJavascript, SiMysql,
@@ -63,6 +65,27 @@ export default function Home() {
     }
   };
 
+  const handleResume = () => {
+    const resumeUrl = "/resume.pdf";
+
+    // Action 1: Open the preview in a new tab
+    window.open(resumeUrl, "_blank");
+
+    // Action 2: Force the download in the background
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.setAttribute("download", "Rimsha_Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleClick = () => {
+    setShowForm(true);
+  }
+
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -75,7 +98,7 @@ export default function Home() {
           This portfolio is my effort to showcase the coding and web development skills that took years to master.</p>
         <div className="flex gap-5 justify-center items-center pt-14">
           <Link href='#Projects' onClick={(e) => handleScroll(e, 'Projects')}><button className="border-2 px-7 py-2 rounded-md cursor-pointer">View Projects</button></Link>
-          <button className="border-2 px-7 py-2 rounded-md text-white bg-black cursor-pointer">Download Resume</button>
+          <a href="/resume.pdf" download="Rimsha_Resume.pdf" target="_blank" rel="noopener noreferrer" className="border-2 px-7 py-2 rounded-md text-white bg-black cursor-pointer" onClick={(e) => { e.preventDefault(); handleResume(); }}>Download Resume</a>
         </div>
 
         <div className="flex gap-7 justify-center items-center mt-24 bg-[#151820] text-white p-6 font-bold w-fit mx-auto rounded-2xl">
@@ -245,11 +268,13 @@ export default function Home() {
             <p className="text-center text-xl text-zinc-700 max-w-3xl mx-auto">Build fast, scalable web applications with India&apos;s most dedicated full-stack developer.</p>
             <div className="flex justify-center mt-11">
               <a href=""></a>
-              <button className="bg-black text-white cursor-pointer px-8 py-2 text-center text-lg font-semibold rounded-md border border-transparent transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50">Hire Me Now</button>
+              <button className="bg-black text-white cursor-pointer px-8 py-2 text-center text-lg font-semibold rounded-md border border-transparent transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50" onClick={handleClick}>Hire Me Now</button>
             </div>
           </div>
         </div>
       </section>
+
+      <Form isOpen={showForm} onClose={() => setShowForm(false)} />
 
       <Footer />
     </>

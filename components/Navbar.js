@@ -2,6 +2,10 @@
 import { Poppins } from 'next/font/google';
 import Link from 'next/link'
 import React from 'react'
+import { useParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -10,30 +14,44 @@ const poppins = Poppins({
 });
 
 const Navbar = () => {
+    const params = useParams();
+    const router = useRouter();
+    const pathname = usePathname();
+
+    useEffect(() => {
+        if (window.location.hash) {
+            window.history.replaceState(null, '', '/');
+        }
+    }, [pathname]);
+
     const handleScroll = (e, id) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-  };
+        if (pathname !== '/') {
+            return;
+        }
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+            window.history.pushState(null, '', `/`);
+        }
+    };
 
     return (
-        <header className='flex flex-col px-6 py-5 h-28 bg-black text-white'>
+        <header id='Home' className='flex flex-col px-6 py-5 h-28 bg-black text-white'>
             <div className='flex w-full'>
-                <div className={`logo font-bold text-xl ${poppins.className}`}>&lt;/&gt;RimshaComix</div>
+                <Link href="/" className={`logo font-bold text-xl cursor-pointer ${poppins.className}`}>&lt;/&gt;RimshaComix</Link>
                 <div className='flex justify-between w-full gap-4 pt-1'>
                     <div>
                         <ul className='flex gap-10 pl-6 cursor-pointer'>
-                            <li><Link href='#Home' onClick={(e) => handleScroll(e, 'Home')}>Home</Link></li>
-                            <li><Link href='#About' onClick={(e) => handleScroll(e, 'About')}>About</Link></li>
-                            <li><Link href='#Skills' onClick={(e) => handleScroll(e, 'Skills')}>Skills</Link></li>
-                            <li><Link href='#Projects' onClick={(e) => handleScroll(e, 'Projects')}>Projects</Link></li>
-                            <li><Link href='#Achievements' onClick={(e) => handleScroll(e, 'Achievements')}>Achievements</Link></li>
-                            <li><Link href='#HireMe' onClick={(e) => handleScroll(e, 'HireMe')}>Hire Me</Link></li>
+                            <li><Link href='/#Home' onClick={(e) => handleScroll(e, 'Home')}>Home</Link></li>
+                            <li><Link href='/#About' onClick={(e) => handleScroll(e, 'About')}>About</Link></li>
+                            <li><Link href='/#Skills' onClick={(e) => handleScroll(e, 'Skills')}>Skills</Link></li>
+                            <li><Link href='/#Projects' onClick={(e) => handleScroll(e, 'Projects')}>Projects</Link></li>
+                            <li><Link href='/#Achievements' onClick={(e) => handleScroll(e, 'Achievements')}>Achievements</Link></li>
+                            <li><Link href='/#HireMe' onClick={(e) => handleScroll(e, 'HireMe')}>Hire Me</Link></li>
                         </ul>
                     </div>
                     <div className='flex items-start gap-4'>
@@ -47,8 +65,8 @@ const Navbar = () => {
 
             <div>
                 <ul className='flex gap-10 py-3 cursor-pointer'>
-                    <li>Experience</li>
-                    <li>Blog</li>
+                    <li><Link href="/Experience">Experience</Link></li>
+                    <li><Link href="/Blog">Blog</Link></li>
                 </ul>
             </div>
         </header >
