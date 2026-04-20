@@ -72,9 +72,9 @@ const Footer = () => {
         <div className='flex flex-col'>
           <h3 className='mb-4 font-semibold text-gray-900'>Legal</h3>
           <div className='flex flex-col space-y-2'>
-            <Link className='text-gray-600 hover:text-gray-900' href="http://localhost:3000/terms">Terms</Link>
-            <Link className='text-gray-600 hover:text-gray-900' href="http://localhost:3000/privacy">Privacy</Link>
-            <Link className='text-gray-600 hover:text-gray-900' href="http://localhost:3000/disclaimer">Disclaimer</Link>
+            <Link className='text-gray-600 hover:text-gray-900' href="/terms">Terms</Link>
+            <Link className='text-gray-600 hover:text-gray-900' href="/privacy">Privacy</Link>
+            <Link className='text-gray-600 hover:text-gray-900' href="/disclaimer">Disclaimer</Link>
           </div>
         </div>
         <div className='flex flex-col'>
