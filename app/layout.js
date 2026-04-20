@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "rimshacomix Portfolio",
+  title: "rimshacomix",
   description: "Portfolio of Rimsha Konain (RimshaComix) - Showcasing web development projects, technical skills, and creative works.",
   keywords: ["Web Developer", "Full Stack", "RimshaComix", "Portfolio", "React", "Next.js"],
   authors: [{ name: "Rimsha Konain C" }],
