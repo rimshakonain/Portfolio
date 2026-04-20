@@ -82,7 +82,7 @@ const Footer = () => {
           <div className='flex flex-col space-y-2'>
             <Link className='flex items-center space-x-2 text-gray-600 hover:text-gray-900' href="https://github.com/rimshakonain" target='_blank'><Image width={23} height={23} src="/github.svg" alt="GitHub" /><span>GitHub</span></Link>
             <Link className='flex items-center space-x-2 text-gray-600 hover:text-gray-900' href="https://www.linkedin.com/in/rimsha-konain-c" target='_blank'><Image width={20} height={20} src="/linkedin.svg" alt="LinkedIn" /><span>LinkedIn</span></Link>
-            <Link className='flex items-center space-x-2 text-gray-600 hover:text-gray-900' href="https://www.instagram.com/rimshacomix/?hl=en" target='_blank'><Image width={20} height={20} src="/instagram.svg" alt="Instagram" /><span>Instagram</span></Link>
+            <Link className='flex items-center space-x-2 text-gray-600 hover:text-gray-900' href="https://www.instagram.com/rimshacomix/?hl=en" target='_blank'><Image width={20} height={20} src="/Instagram.svg" alt="Instagram" /><span>Instagram</span></Link>
             <Link className='flex items-center space-x-2 text-gray-600 hover:text-gray-900' href="mailto:rimshakonainc@gmail.com" target='_blank'><Image width={20} height={20} src="/Gmail.svg" alt="Email" /><span>Email</span></Link>
           </div>
         </div>
