@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useState } from "react";
 import Form from "@/components/Form";
+import Typewriter from "@/components/TypeWriter";
 
 import {
   SiCplusplus, SiPython, SiJavascript, SiMysql,
@@ -92,7 +93,10 @@ export default function Home() {
       <div className="hero w-[60vw] mx-auto text-center mt-40 min-h-screen">
         <button className="text-sm border-2 p-2 rounded-full bg-[#18181b] px-5 text-white">Design. Code. Create</button>
         <h1 className="text-7xl pt-16">Welcome to RimshaComix</h1>
-        <h2 className="text-3xl pt-4">Full-Stack MERN & Next.js Developer</h2>
+        {/* <h2 className="text-3xl pt-4">
+          <TypeWriter text="Full-Stack MERN & Next.js Developer" speed={60} />
+        </h2> */}
+        <Typewriter />
         <p className="text-xl pt-12 text-gray-700">Want to see what I&apos;ve been working on? I&apos;ve got you covered!
           Browse my projects and skills to discover what I do best.
           This portfolio is my effort to showcase the coding and web development skills that took years to master.</p>
