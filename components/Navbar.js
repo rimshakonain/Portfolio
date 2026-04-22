@@ -40,7 +40,7 @@ const Navbar = () => {
     };
 
     return (
-        <header id='Home' className='flex flex-col px-6 py-5 h-28 bg-black text-white'>
+        <header id='Home' className='flex flex-col px-6 py-5 h-28 bg-white text-black border-b-[0.5] border-slate-300'>
             <div className='flex w-full'>
                 <Link href="/" className={`logo font-bold text-xl cursor-pointer ${poppins.className}`}>&lt;/&gt;RimshaComix</Link>
                 <div className='flex justify-between w-full gap-4 pt-1'>
@@ -55,10 +55,10 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className='flex items-start gap-4'>
-                        <input className='px-4 pr-10 text-xs py-2 rounded-md bg-zinc-100 dark:bg-zinc-800 w-60 mx-0 outline-none focus:ring-0 focus:border-none' type="text" placeholder='Search...' />
-                        <Link className='border border-[0.5px] border-zinc-700 px-4 py-1 rounded-sm ' href="">Login</Link>
-                        <Link className='border border-[0.5px] border-zinc-700 px-4 py-1 rounded-sm ' href="">Signup</Link>
-                        <button className='border border-[0.5px] border-zinc-700 py-[6] p-2 rounded-sm cursor-pointer'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-moon h-5 w-5 transition-transform scale-100 rotate-90 dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></button>
+                        <input className='px-4 pr-10 text-xs py-2 rounded-md bg-zinc-100  w-60 mx-0 outline-none focus:ring-0 focus:border-none' type="text" placeholder='Search...' />
+                        <Link className='gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-gray-200 border-input bg-background text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md ' href="">Login</Link>
+                        <Link className='gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-gray-200 border-input bg-background text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md ' href="">Signup</Link>
+                        <button className='border border-[0.5px] border-gray-300 py-[6] p-2 rounded-sm cursor-pointer'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-moon h-5 w-5 transition-transform scale-100 rotate-90 dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></button>
                     </div>
                 </div>
             </div>

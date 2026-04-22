@@ -90,42 +90,53 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="hero w-[60vw] mx-auto text-center mt-40 min-h-screen">
-        <button className="text-sm border-2 p-2 rounded-full bg-[#18181b] px-5 text-white">Design. Code. Create</button>
-        <h1 className="text-7xl pt-16">Welcome to RimshaComix</h1>
-        {/* <h2 className="text-3xl pt-4">
-          <TypeWriter text="Full-Stack MERN & Next.js Developer" speed={60} />
-        </h2> */}
-        <Typewriter />
-        <p className="text-xl pt-12 text-gray-700">Want to see what I&apos;ve been working on? I&apos;ve got you covered!
-          Browse my projects and skills to discover what I do best.
-          This portfolio is my effort to showcase the coding and web development skills that took years to master.</p>
-        <div className="flex gap-5 justify-center items-center pt-14">
-          <Link href='#Projects' onClick={(e) => handleScroll(e, 'Projects')}><button className="border-2 px-7 py-2 rounded-md cursor-pointer">View Projects</button></Link>
-          <a href="/resume.pdf" download="Rimsha_Resume.pdf" target="_blank" rel="noopener noreferrer" className="border-2 px-7 py-2 rounded-md text-white bg-black cursor-pointer" onClick={(e) => { e.preventDefault(); handleResume(); }}>Download Resume</a>
-        </div>
+      <div className="relative w-full overflow-hidden bg-[#f8f7ff]">{/* LAYER 1: Custom Radial Glow using your hex codes */}
+        {/* LAYER 1: Brighter Lilac center fading into the Blue-Grey shade */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#cfbfdd_0%,#bcc4db_30%,#f8f7ff_100%)] opacity-80"></div>
 
-        <div className="flex gap-7 justify-center items-center mt-24 bg-[#151820] text-white p-6 font-bold w-fit mx-auto rounded-2xl">
-          <div className="flex flex-col">
-            <span className="text-3xl font-bold">700+</span>
-            <span className="text-sm">Streak</span>
+        {/* LAYER 2: Very subtle blend (Reduced to 10% to keep it bright) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-purple-900/10 mix-blend-multiply pointer-events-none"></div>
+
+        {/* LAYER 3: Soft white fade to keep the bottom clean */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/60"></div>
+
+        <div className="hero relative z-10 w-[60vw] mx-auto text-center pt-40 pb-35">
+          <button className="text-sm font-medium p-2 rounded-full bg-[#b0aec4] px-5">Design. Code. Create</button>
+          <h1 className="text-7xl pt-16 font-bold lg:text-7xl tracking-tight">Welcome to <span className="relative text-foreground">RimshaComix</span></h1>
+          {/* <h2 className="text-3xl pt-4">
+            <TypeWriter text="Full-Stack MERN & Next.js Developer" speed={60} />
+          </h2> */}
+          <Typewriter />
+          <p className="text-base leading-relaxed text-xl pt-12 text-gray-700">Want to see what I&apos;ve been working on? I&apos;ve got you covered!
+            Browse my projects and skills to discover what I do best.
+            This portfolio is my effort to showcase the coding and web development skills that took years to master.</p>
+          <div className="flex gap-5 justify-center items-center pt-14">
+            <Link href='#Projects' onClick={(e) => handleScroll(e, 'Projects')}><button className="bg-black text-white px-7 py-2 rounded-md cursor-pointer">View Projects</button></Link>
+            <Link href="/resume.pdf" download="Rimsha_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-7 py-2 rounded-md text-black bg-white cursor-pointer font-medium text-base" onClick={(e) => { e.preventDefault(); handleResume(); }}>Download Resume</Link>
           </div>
-          <div className="flex flex-col">
-            <span className="text-3xl font-bold">7+</span>
-            <span className="text-sm">Apps</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-3xl font-bold">500+</span>
-            <span className="text-sm">Commits</span>
+
+          <div className="flex gap-11 justify-center items-center mt-24 bg-white/30 backdrop-blur-md text-black py-5 px-8 font-bold w-fit mx-auto rounded-2xl shadow-lg">
+            <div className="flex flex-col">
+              <span className="text-3xl font-bold">700+</span>
+              <span className="text-sm text-gray-600 font-medium">Streak</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-3xl font-bold">7+</span>
+              <span className="text-sm text-gray-600 font-medium">Apps</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-3xl font-bold">500+</span>
+              <span className="text-sm text-gray-600 font-medium">Commits</span>
+            </div>
           </div>
         </div>
       </div>
+        {/* <div className="bg-black w-full h-px mb-20 opacity-50"></div> */}
 
 
-      <div className="bg-black w-full h-px my-20 opacity-50"></div>
 
 
-      <section id="About" className="about min-h-screen">
+      <section id="About" className="about min-h-screen pt-15">
         <div className="max-w-6xl mx-auto">
           <div className="title text-center font-bold text-4xl">About Me</div>
           <div className="text-center">
@@ -165,7 +176,7 @@ export default function Home() {
 
       <section id="Skills" className="skills w-3/4 mx-auto">
         <div className="w-[75vw] mx-auto">
-          <div className="title text-center font-bold text-4xl pt-20">Technical Expertise</div>
+          <div className="title text-center font-semibold text-3xl pt-20">Technical Expertise</div>
           <div className="flex justify-between items-center mt-20">
             <div className="flex flex-col justify-center items-center">
               <p className="text-lg font-medium text-zinc-600">I have built</p>
@@ -206,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="Projects" className="projects min-h-screen pb-16">
+      <section id="Projects" className="projects min-h-screen pb-16 bg-gradient-to-br from-zinc-50 to-zinc-200">
         <div className="w-[83vw] mx-auto">
           <h2 className="text-lg text-zinc-600 text-start mb-2 font-semibold mt-32">Projects</h2>
           <h2 className="font-semibold text-4xl mt-4">Take a Look at Some of My Recent Work</h2>

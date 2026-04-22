@@ -72,7 +72,7 @@ const Typewriter = () => {
     }, []);
 
     return (
-        <h2 className="text-3xl pt-4 font-medium min-h-[45px]">
+        <h2 className="text-3xl font-semibold text-gray-800 pt-4 font-medium min-h-[45px]">
             {/* The span MUST be empty; do not put text inside it */}
             I am a <span ref={el}></span>
         </h2>
