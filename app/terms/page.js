@@ -78,7 +78,7 @@ const Terms = () => {
             </p>
           </section>
           <section>
-            <h2 className="text-lg font-semibold text-foreground">10. Contact Us</h2>
+            <h2 className="text-lg font-semibold text-foreground">10. Contact Me</h2>
             <div className="text-card-foreground">
               If you have any questions or concerns regarding these terms, feel free to contact:<br />
               📧 <a href="mailto:rimshakonainc@gmail.com" className="text-primary hover:text-primary/90 hover:underline">rimshakonainc@gmail.com</a><br />
