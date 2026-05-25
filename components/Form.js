@@ -89,7 +89,7 @@ const Form = ({ isOpen, onClose }) => {
                     <button 
                         disabled={isSubmitting} 
                         type="submit" 
-                        className="bg-black text-white py-3 rounded-md font-semibold mt-4 hover:bg-zinc-800 disabled:bg-gray-400"
+                        className="bg-black text-white py-3 rounded-md font-semibold mt-4 hover:bg-zinc-800 disabled:bg-gray-400 cursor-pointer"
                     >
                         {isSubmitting ? "Sending..." : "Send Inquiry"}
                     </button>

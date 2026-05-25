@@ -64,7 +64,7 @@ const ExperiencePage = () => {
 
             <Link 
                 href="/" 
-                className="mt-16 px-6 py-2 border-black text-black rounded-md border-2" 
+                className="mt-16 px-7 py-2 border-black text-white bg-black rounded-md" 
             >
                 Back to Home
             </Link>
