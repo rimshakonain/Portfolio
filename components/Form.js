@@ -46,10 +46,10 @@ const Form = ({ isOpen, onClose }) => {
     };
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
             <ToastContainer /> 
             
-            <div className="bg-white p-8 rounded-xl shadow-2xl w-[90%] max-w-md relative text-black">
+            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-2xl w-full max-w-md relative text-black max-h-[90vh] overflow-y-auto">
                 <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-black cursor-pointer">
                     ✕
                 </button>
