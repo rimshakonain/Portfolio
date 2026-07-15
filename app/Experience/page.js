@@ -27,6 +27,16 @@ const ExperiencePage = () => {
         },
         {
             title: "Freelance Web Designer",
+            company: "ARK Kitchen",
+            logo: "/arkkitchen.png",
+            duration: "July 2026",
+            location: "Vaniyambadi, Tamil Nadu · Remote",
+            website: "https://arkkitchen.framer.website/",
+            description:
+                "Designed and delivered a responsive website for a home food delivery business. Built a scalable digital menu featuring 70+ food items, designed a streamlined next-day pre-order workflow, and integrated WhatsApp ordering to simplify the customer ordering experience."
+        },
+        {
+            title: "Freelance Web Designer",
             company: "Shop Crystal Touch",
             logo: "/shopcrystaltouch.jpeg",
             duration: "June 2026",
@@ -35,16 +45,6 @@ const ExperiencePage = () => {
             description:
                 "Designed and delivered a responsive e-commerce website for a handmade accessories business. Collaborated directly with the client to understand business requirements, organized products into intuitive categories, and integrated WhatsApp-based ordering to provide a seamless customer purchasing experience."
         },
-        {
-            title: "Freelance Web Designer",
-            company: "ARK Kitchen",
-            logo: "/arkkitchen.png",
-            duration: "July 2026",
-            location: "Vaniyambadi, Tamil Nadu · Remote",
-            website: "https://arkkitchen.framer.website/",
-            description:
-                "Designed and delivered a responsive website for a home food delivery business. Built a scalable digital menu featuring 70+ food items, designed a streamlined next-day pre-order workflow, and integrated WhatsApp ordering to simplify the customer ordering experience."
-        }
     ];
 
     return (
