@@ -11,6 +11,7 @@ const ExperiencePage = () => {
             logo: "/srmist.jpg",
             duration: "Feb 2026 - Present",
             location: "Chennai, Tamil Nadu · On-site",
+            website: "",
             description:
                 "Member of the Innovation/Startup Cell. Contributing across creative and technical domains to support startups and hackathon teams. Collaborating with cross-functional teams to move ideas toward execution while learning, building, and debugging."
         },
@@ -20,6 +21,7 @@ const ExperiencePage = () => {
             logo: "/sparwix.jpg",
             duration: "Feb 2026 - Present",
             location: "Chennai, Tamil Nadu · On-site",
+            website: "",
             description:
                 "AICTE Internship focused on digital marketing strategies and outreach. Gained hands-on exposure in online marketing, engagement, and applying technical development to digital growth."
         },
@@ -29,6 +31,7 @@ const ExperiencePage = () => {
             logo: "/shopcrystaltouch.jpeg",
             duration: "June 2026",
             location: "Chennai, Tamil Nadu · Remote",
+            website: "https://shopcrystaltouch.framer.website/",
             description:
                 "Designed and delivered a responsive e-commerce website for a handmade accessories business. Collaborated directly with the client to understand business requirements, organized products into intuitive categories, and integrated WhatsApp-based ordering to provide a seamless customer purchasing experience."
         },
@@ -38,6 +41,7 @@ const ExperiencePage = () => {
             logo: "/arkkitchen.png",
             duration: "July 2026",
             location: "Vaniyambadi, Tamil Nadu · Remote",
+            website: "https://arkkitchen.framer.website/",
             description:
                 "Designed and delivered a responsive website for a home food delivery business. Built a scalable digital menu featuring 70+ food items, designed a streamlined next-day pre-order workflow, and integrated WhatsApp ordering to simplify the customer ordering experience."
         }
@@ -87,6 +91,17 @@ const ExperiencePage = () => {
                             <p className="mt-4 text-zinc-600 leading-relaxed text-sm sm:text-base">
                                 {exp.description}
                             </p>
+
+                            {exp.website && (
+                                <a
+                                    href={exp.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`View ${exp.company} project`}
+                                    className="mt-4 inline-flex items-center gap-1 text-sm text-black hover:text-zinc-900 transition-colors">
+                                    View Project ↗
+                                </a>
+                            )}
                         </div>
                     </div>
                 ))}
