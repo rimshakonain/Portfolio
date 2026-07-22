@@ -67,7 +67,7 @@ export default function Home() {
   };
 
   const handleResume = () => {
-    const resumeUrl = "/resume.pdf";
+    const resumeUrl = "/Resume.pdf";
 
     // Action 1: Open the preview in a new tab
     window.open(resumeUrl, "_blank");
@@ -130,7 +130,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="/resume.pdf"
+              href="/Resume.pdf"
               download="Rimsha_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
