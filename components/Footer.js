@@ -33,7 +33,7 @@ const Footer = () => {
   };
 
   const handleResume = () => {
-    const resumeUrl = "/Resume.pdf";
+    const resumeUrl = "/resume.pdf";
 
     window.open(resumeUrl, "_blank");
 
@@ -55,7 +55,7 @@ const Footer = () => {
             <Link className='text-gray-600 hover:text-gray-900' href="/#About" onClick={(e) => handleScroll(e, 'About')}>About Me</Link>
             <Link className='text-gray-600 hover:text-gray-900' href="/#HireMe">Contact</Link>
             <Link
-              href="/Resume.pdf"
+              href="/resume.pdf"
               download="Rimsha_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
