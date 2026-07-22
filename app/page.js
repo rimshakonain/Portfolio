@@ -327,7 +327,7 @@ export default function Home() {
                 width={400}
                 height={400}
                 className="object-cover rounded-t-lg w-full"
-                src="/ChurnShield.png"
+                src="/ChurnShield1.png"
                 alt=""
               />
               <span className="text-md font-medium text-center pt-2">
@@ -343,7 +343,7 @@ export default function Home() {
                 width={400}
                 height={400}
                 className="object-cover rounded-t-lg w-full"
-                src="/ResumeIQ.png"
+                src="/ResumeIQ1.png"
                 alt=""
               />
               <span className="text-md font-medium text-center pt-2">
