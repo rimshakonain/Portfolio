@@ -327,6 +327,38 @@ export default function Home() {
                 width={400}
                 height={400}
                 className="object-cover rounded-t-lg w-full"
+                src="/ChurnShield.png"
+                alt=""
+              />
+              <span className="text-md font-medium text-center pt-2">
+                Enterprise Customer Retention Platform
+              </span>
+              <p className="px-4 text-zinc-600 text-center pt-2">
+                Full-stack AI-powered customer retention platform with churn prediction and explainable AI
+              </p>
+            </div>
+
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image
+                width={400}
+                height={400}
+                className="object-cover rounded-t-lg w-full"
+                src="/ResumeIQ.png"
+                alt=""
+              />
+              <span className="text-md font-medium text-center pt-2">
+                AI Resume Analyzer & Job Matching Platform
+              </span>
+              <p className="px-4 text-zinc-600 text-center pt-2">
+                Full-stack AI-powered resume analysis platform with ATS scoring and job matching.
+              </p>
+            </div>
+
+            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
+              <Image
+                width={400}
+                height={400}
+                className="object-cover rounded-t-lg w-full"
                 src="/GetMeAChai.png"
                 alt=""
               />
@@ -361,23 +393,6 @@ export default function Home() {
                 width={400}
                 height={400}
                 className="object-cover rounded-t-lg w-full"
-                src="/BitLinks.png"
-                alt=""
-              />
-              <span className="text-md font-medium text-center pt-2">
-                The best URL shortener in the Market
-              </span>
-              <p className="px-4 text-zinc-600 text-center pt-2">
-                Fast, straightforward link shortening with zero tracking and no login
-                required.
-              </p>
-            </div>
-
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <Image
-                width={400}
-                height={400}
-                className="object-cover rounded-t-lg w-full"
                 src="/PassOP.png"
                 alt=""
               />
@@ -387,23 +402,6 @@ export default function Home() {
               <p className="px-4 text-zinc-600 text-center pt-2">
                 A secure, no-login tool to store, edit, and manage your credentials
                 privately.
-              </p>
-            </div>
-
-            <div className="bg-foreground/20 backdrop-blur-sm bg-zinc-200 rounded-lg h-75 flex flex-col items-center text-center cursor-pointer hover:shadow-md shadow-sm">
-              <Image
-                width={400}
-                height={400}
-                className="object-cover rounded-t-lg w-full"
-                src="/iTask.png"
-                alt=""
-              />
-              <span className="text-md font-medium text-center pt-2">
-                Task Management App
-              </span>
-              <p className="px-4 text-zinc-600 text-center pt-2">
-                A clean, focused space to organise daily goals and track progress
-                without clutter.
               </p>
             </div>
 
